@@ -6,8 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Game</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>เกมสําหรับน้องเพงของพี่โอ้ด</title>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -82,21 +81,21 @@
 <body>
 
   <div class="card">
-    <h1>Quiz Game</h1>
+    <h1>น้องเพง's quiz</h1>
     <p id="question">Loading...</p>
     <input type="text" id="answer" class="input-field" placeholder="Your answer here...">
     <button id="submit" class="button">Submit</button>
-    <p class="score" id="score">Score: 0 จุ้บ</p>
+    <p class="score" id="score">จุ้บจุ้บ: 0 จุ้บ</p>
     <p class="feedback" id="feedback"></p>
   </div>
 
   <script>
     const questions = [
       { question: "น้องเพงเป็นสัตว์อะไร", answer: ["หมา", "ม๋า", "หมู", "หมุ"] },
-      { question: "What is the capital of France?", answer: "Paris" },
-      { question: "What is 5 * 6?", answer: "30" },
-      { question: "What is the color of the sky?", answer: "blue" },
-      { question: "What is the boiling point of water in Celsius?", answer: "100" }
+      { question: "พี่โอ้ดป็นแฟนใคร", answer: ["น้องเพลง", "เพลง", "น้องเพลง", "หมุอ้วร"] },
+      { question: "ม๋า บวก ม๋า ได้อะไร", answer: ["น้องเพลง", "เพลง", "น้องเพลง", "แฟนพี่โอ้ด"] },
+      { question: "today's Wordle is...", answer: ["steep", "STEEP", "ไม่รู้", "ยอมแล้วครับ"] },
+      { question: "พี่โอ้ดน่ารักมั้ย ตอบได้แค่น่ารัก ไม่เชื่อก็ลองดู", answer: "น่ารัก" }
     ];
 
     let currentQuestion = 0;
@@ -119,9 +118,9 @@
         if (currentQuestion < questions.length - 1) {
           currentQuestion++;
           displayQuestion();
-          document.getElementById("feedback").textContent = `Correct! You earned ${score} จุ้บ.`;
+          document.getElementById("feedback").textContent = `เก่งมากไออ้วร ${score} จุ้บ.`;
         } else {
-          document.getElementById("feedback").textContent = `Congratulations! You have completed the quiz with ${score} จุ้บ.`;
+          document.getElementById("feedback").textContent = `เก่งมากกกกกไออ้วรของพี่ เธอ have completed the quiz with ${score} จุ้บ.`;
           document.getElementById("submit").disabled = true;
         }
       } else {
